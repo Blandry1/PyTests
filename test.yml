@@ -1,0 +1,120 @@
+swagger: '2.0'
+info:
+  description: "This is RBT Test"
+title: RBT Testing
+version: "1.0"
+
+servers:
+  - url: localhost:6001/v1/ui/
+  description: test server
+
+path:
+  /users:
+    get:
+      summary: Runs RBT Test and returns results
+      description: Connects to RBT test Suite
+      responses:
+      '200':  #status code
+        description: Successful Call to RBT
+        content:
+          application/json
+            schema:
+              type: string
+              items:
+                type: string
+
+
+# consumes:
+# - application/json
+# produces:
+# - application/json
+# basePath: "/v1"
+# tags:
+#   name: "pet"
+#   description: "everything about your pets"
+#   name: "store"
+#   description: "access to petstore orders"
+# schemes:
+#   "http"
+
+
+# paths:
+#   '/FT':
+#     get:
+#       tags: pet
+#       operationId: demo.get_it
+#       summary: testing
+#       parameters:
+#         - name: name
+#           in: query
+#           type: string
+#           default: 'Charlie'
+#       responses:
+#         200:
+#           description: Return response
+
+
+# basePath: "/v1"
+# tags:
+#   - name: GET
+#     description: GET
+#   - name: POST
+#     description: POST
+# paths:
+#   '/RBT':
+#     get:
+#       tags: [GET]
+#       operationId: demo.get
+#       summary: 测试get请求
+#       responses:
+#         200:
+#           description: Return response
+#       consumes:
+#         - application/json
+#       produces:
+#         - text/html
+#         - application/json
+
+    # get:
+    #   tags: [GET]
+    #   operationId: demo.get_it
+    #   summary: 测试get请求
+    #   parameters:
+    #     - name: name
+    #       in: body
+    #       schema:
+    #         type: object
+    #         properties:
+    #           name:
+    #             type: string
+    #             default: 'john'
+    #   responses:
+      #   200:
+      #     description: Return response
+      # consumes:
+      #   - application/json
+      # produces:
+      #   - text/html
+      #   - application/json
+
+    post:
+      tags: [POST]
+      operationId: demo.post_it
+      summary: 测试post请求
+      parameters:
+        - name: name
+          in: body
+          schema:
+            type: object
+            properties:
+              name:
+                type: string
+                default: 'john'
+      responses:
+        200:
+          description: Return response
+      consumes:
+        - application/json
+      produces:
+        - text/html
+        - application/json
